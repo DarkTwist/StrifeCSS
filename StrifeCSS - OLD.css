@@ -1,0 +1,611 @@
+/*announcement sticky*/
+     div.content {
+ /*This lowers the links to create space*/
+     margin-top: 50px
+     }
+  .titlebox form {
+  /*Hack to enable repositioning of child elements*/
+     position: static
+     }
+ .side h3:nth-of-type(1) {
+ /*this code positions the sticky*/
+     position: absolute;
+     display: block;
+     top: 60px;
+     left: 30px;
+ /*this code styles the sticky*/
+     background-color: #B7BAF1;
+     color: #555555;
+     text-align: left;
+     margin: 15px;
+     border-radius: 8px;
+     width: 30%;
+     padding: 7px 0px 7px 40px;
+/*this code creates the image*/
+     background-image: url(%%warning%%);
+     background-repeat: no-repeat;
+     background-position: left
+     }
+
+
+
+/*Change the word for 'readers' and the currently online*/
+/*
+.subscribers .word, .users-online .word{
+display:none;
+}
+
+.subscribers .number:after { 
+content: " Heroes"
+}
+.users-online .number:after { 
+content: " here now" 
+}
+*/
+
+/* Sidebar name */
+.pagename a:after,
+.titlebox .redditname a:after {
+   content: "Strife";
+}
+
+.pagename a, .titlebox .redditname a {
+   font-size: 0!important;
+}
+
+.pagename a:after {
+   font-size: 18px;
+   vertical-align: bottom;
+}
+
+
+.titlebox .redditname a:after {
+	  font-size: 26px; /*This is the name is the sidebar, so you may need to make it smaller*/
+  }
+
+/*Add Image to Sidebar
+div.side div.spacer:nth-of-type(1){
+padding:300px 0 0 !important;
+background:url(%%Test%%) top center no-repeat;
+margin-top:10px;
+}
+*/
+
+/*Optional- adds a caption under that image
+div.side div.spacer:nth-of-type(1):before{
+display:block;
+margin-top:10px;
+margin-left:10px;
+width:300px;
+content:"This is a caption, edit me to add your own caption.";
+padding:0px 0 10px;
+line-height:16px;
+font-size:small;
+text-align:center;
+font-size: 16pt;
+} 
+*/
+
+/*Banner
+#header {background:Gray url(%%Banner%%)repeat scroll center left!important;border:none!important;height:200px!important}
+*/
+/*
+#sr-header-area {
+background-color: #fff;
+opacity: 1;
+white-space: nowrap;
+text-transform: uppercase;
+font-size: 90%;
+height: 18px;
+line-height: 18px;
+z-index: 999;
+}
+#sr-header-area a.choice {
+    opacity: 1.0!important;
+    z-index: 999;
+}
+#sr-header-area a.choice:hover { 
+    text-decoration: underline;
+}
+.tabmenu {
+position:absolute;
+bottom:0px;
+}
+#header-bottom-left {
+position:absolute;
+bottom:0px;
+}
+#header {
+background-color: #c6daed;   
+border: 0px  #000000 solid !important;
+}
+#header-img {
+margin-top: 2px;
+margin-right: 5px;
+margin-left:10px;
+}
+*/
+
+/* Sidebar boxes */
+.side h6 { /* list button */
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  background: #F5F5F5;
+  border: 1px solid #DDD;
+  font-size: 12px;
+  color: #111;
+  cursor: pointer;
+}
+.side h6:after { /* "click to expand" text */
+  content: "click to expand";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  font-size: 9px;
+  font-weight: normal;
+  color: gray;
+}
+.side h6 + ul { /* styles (+ hides) the list */
+  position: relative;
+  margin: -40px 0 10px;
+  padding: 28px 0 0;
+  list-style: none;
+  border: 1px solid #DDD;
+  display: none;
+}
+.side h6:active + ul, /* displays list when button is clicked */
+.side h6 + ul:hover { /* and when hovering over expanded list */
+  display: block;
+}
+.side h6 + ul li { /* styles list items */
+  position: relative;
+  padding: 5px;
+  border-top: 1px solid #DDD;
+  font-size: 11px;
+}
+
+.sidecontentbox .helplink + .title h1 { font-size: 0 !important }
+.sidecontentbox .helplink + .title h1:before { font-size: 10pt !important; content: "r/strife team" }
+
+/*Spoiler tag within comments. "[This is a spoiler sentence.](/spoiler)"
+*/  
+a[href$="/spoiler"] {  
+background: #000 !important;  
+color: #000 !important  
+}  
+
+a[href$="/spoiler"]:hover {  
+color: #FFF !important  
+}  
+
+/* last edited timestamp */
+.edited-timestamp[title]:after {
+    content: " (" attr(title) ")";
+    font-size: 90%;
+}
+
+/* Green quote */
+.md blockquote {
+    border: 0;
+    margin: 0;
+    color: #789922;
+    display: block;
+    line-height: 0.8
+    }
+
+.md blockquote p:before {
+    content: ">";
+    float: left;
+    display: block;
+    }
+
+/*Change vote arrows 
+.arrow.up { background-image: url(%%UpNotClicked%%); 
+background-position: 0px 0px; 
+height: 14px; width: 15px; 
+}
+.arrow.upmod { 
+background-image: url(%%UpClicked%%); 
+background-position: 0px 0px; 
+height: 14px; width: 15px;  
+}
+.arrow.down { background-image: url(%%DownNotClicked%%); 
+background-position: 0px 0px; 
+height: 14px; width: 15px; 
+}
+.arrow.downmod { 
+background-image: url(%%DownClicked%%); 
+background-position: 0px 0px; 
+height: 14px; width: 15px; 
+}
+*/ 
+
+/*Changes name (at the top) to an image. All '??' must be edited to the dimentions 
+you want your image to be.  
+
+.redditname a{
+background:url(IMAGE);
+height: ??px;
+width: ??px;}
+
+#header-bottom-left{
+height: ??px;}
+
+.redditname a{
+text-indent:-9001px;
+}
+
+#header-img-a,
+.redditname a,
+.tabmenu {
+display: inline;
+float: left;}
+
+.tabmenu{
+position:relative;
+top:100%;
+margin-top:-16px!important;}
+*/
+
+/*Change the color of a self post title  
+a[href*="/r/strife"].title:link {  
+color: #ff0  
+}
+*/
+
+/* Downvote Warning */  
+#siteTable .entry.dislikes .buttons:before {
+content: "Downvote only if this does not contribute to the topic. ";
+color: blue;
+font-size: 7pt
+}
+
+/* Not subscribed */
+body:not(.subscriber) .down
+{ 
+    visibility: hidden !important;
+}
+
+.content:before{  
+content: url(%%warning%%) " You're not subscribed to r/strife yet! Click the subscribe button on the right to add the subreddit to your    frontpage ";
+margin:4px;
+color:#2e2e2e;
+}
+.subscriber .content:before{
+content: " " !important;
+}
+.side .content:before {
+content: " " !important
+}
+
+/* Highlight stars in sidebar */  
+.side .md p > em {
+
+display: inline-block;
+padding: 5px;
+background: #F6E69F;
+border: 1px solid orange;
+}
+.side .md p > em > strong {
+
+font-style: italic;
+}
+
+/* Headers */
+.side h1{
+	font-size:26px;
+	font-weight:bold;
+	margin:10px 10px;
+	color:#0000FF
+}
+
+.side h5{
+	margin:10px 10px;
+	color:#0000FF
+}
+
+/* Expandy Titles */  
+.side h6 { /* list button */
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  background: #F5F5F5;
+  border: 1px solid #DDD;
+  font-size: 12px;
+  color: #111;
+  cursor: pointer;
+}
+.side h6:after { /* "click to expand" text */
+  content: "click to expand";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  font-size: 9px;
+  font-weight: normal;
+  color: gray;
+}
+.side h6 + ul { /* styles (+ hides) the list */
+  position: relative;
+  margin: -40px 0 10px;
+  padding: 28px 0 0;
+  list-style: none;
+  border: 1px solid #DDD;
+  display: none;
+}
+.side h6:active + ul, /* displays list when button is clicked */
+.side h6 + ul:hover { /* and when hovering over expanded list */
+  display: block;
+}
+.side h6 + ul li { /* styles list items */
+  position: relative;
+  padding: 5px;
+  border-top: 1px solid #DDD;
+  font-size: 11px;
+}
+
+/* No Founder */
+.titlebox .bottom {
+font-size: 0px;
+color: #FFF;
+}
+.titlebox .bottom:before {
+font-size: 10px;
+color: gray;
+content: " ";
+}
+.titlebox .bottom .age {
+font-size: 10px;
+color: gray;
+}
+
+/* Flair */
+
+.flairselector .customizer {
+display: none !important;
+}
+
+/* Flair selector box */
+li.flairsample-left { padding-top: 5px; }
+
+.flair { 
+	color:#00FF96;
+	display:inline-block;
+	border: none !important;
+	padding:0px;	
+	/* background: url(%%spritesheet%%) no-repeat -9999px -9999px; */
+}
+
+/* Strife Moderators */
+/* They have special flair classes that are not user selectable 
+
+a.author[href$='reddit.com/user/DarkTwist'],
+a.author[href$='reddit.com/user/TomaTozzz'],
+a.author[href$='reddit.com/user/newbkid'],
+a.author[href$='reddit.com/user/benjimans']
+{ font-weight: bold; color:#008800 !important;}
+
+a.author[href$='reddit.com/user/DarkTwist']:after,
+a.author[href$='reddit.com/user/TomaTozzz']:after,
+a.author[href$='reddit.com/user/newbkid']:after,
+a.author[href$='reddit.com/user/benjimans']:after
+{
+  margin-left: 5px;
+  padding: 2px 4px;
+  color: #004400;
+  font-weight: normal;
+}
+
+a.author[href$='reddit.com/user/DarkTwist']:after { content: "Moderator"; }
+a.author[href$='reddit.com/user/TomaTozzz']:after { content: "Moderator"; }
+a.author[href$='reddit.com/user/newbkid']:after { content: "Moderator"; }
+a.author[href$='reddit.com/user/benjimans']:after { content: "Moderator"; }
+
+  S2 Employees */
+/* They have special flair classes that are not user selectable */
+
+/* .flair-s2games:before{background:url(%%hon-reddit-thumbs%%) no-repeat scroll -9999px -9999px transparent;display:inline-block;height:28px;margin-right:3px;vertical-align:middle;width:28px} */
+.flair-s2games:before{content:"";background-position:0 -8008px}
+.flair-s2games { font-weight: bold; color:#FF0000 !important;}
+
+/* S2Employees - Job Titles */
+
+/* Before (Add logo) */
+
+/* Username */
+a.author[href$='reddit.com/user/S2Bangerz'],
+a.author[href$='reddit.com/user/S2Sphinx'],
+a.author[href$='reddit.com/user/S2Shade'],
+a.author[href$='reddit.com/user/S2Sell'],
+a.author[href$='reddit.com/user/s2banedeath'],
+a.author[href$='reddit.com/user/S2Fielding'],
+a.author[href$='reddit.com/user/S2Ikkyo'],
+a.author[href$='reddit.com/user/S2Divalicious'],
+a.author[href$='reddit.com/user/S2Testarossa'],
+a.author[href$='reddit.com/user/Feanux'],
+a.author[href$='reddit.com/user/s2redeeem'],
+a.author[href$='reddit.com/user/s2deltaroe'],
+a.author[href$='reddit.com/user/S2paradox870'] { font-weight: bold; color:#FF0000 !important;}
+
+/* After */
+
+a.author[href$='reddit.com/user/S2Bangerz']:after,
+a.author[href$='reddit.com/user/S2Sphinx']:after,
+a.author[href$='reddit.com/user/S2Shade']:after,
+a.author[href$='reddit.com/user/S2Sell']:after,
+a.author[href$='reddit.com/user/s2banedeath']:after,
+a.author[href$='reddit.com/user/S2Fielding']:after,
+a.author[href$='reddit.com/user/S2Ikkyo']:after,
+a.author[href$='reddit.com/user/S2Divalicious']:after,
+a.author[href$='reddit.com/user/S2Testarossa']:after,
+a.author[href$='reddit.com/user/Feanux']:after,
+a.author[href$='reddit.com/user/s2redeeem']:after,
+a.author[href$='reddit.com/user/s2deltaroe']:after,
+a.author[href$='reddit.com/user/S2paradox870']:after
+{
+  margin-left: 5px;
+  padding: 2px 4px;
+  color: #660000;
+  font-weight: normal;
+}
+
+a.author[href$='reddit.com/user/S2Bangerz']:after { content: "Ben Pettit (Lead User Interface and Experience Developer)"; }
+a.author[href$='reddit.com/user/S2Shade']:after { content: "Douglas Houserman (Creative Designer)"; }
+a.author[href$='reddit.com/user/S2Sphinx']:after { content: "Margeaux Sullivan (Marketing Director)"; }
+a.author[href$='reddit.com/user/S2Sell']:after { content: "Kevin Carpenter (Community Manager)"; }
+a.author[href$='reddit.com/user/s2banedeath']:after { content: "Derick Janssen (Programmer)"; }
+a.author[href$='reddit.com/user/S2Fielding']:after { content: "James Fielding (Executive Director of Design and Development)"; }
+a.author[href$='reddit.com/user/S2Ikkyo']:after { content: "Jason Gripp (Chief Technology Officer)"; }
+a.author[href$='reddit.com/user/S2Divalicious']:after { content: "Pu Liu (Director of Monetization)"; }
+a.author[href$='reddit.com/user/S2Testarossa']:after { content: "Leslie Chamberlain (Operational Marketing)"; }
+a.author[href$='reddit.com/user/s2redeeem']:after { content: "Kris Sosa (Senior Graphic Designer)"; }
+a.author[href$='reddit.com/user/s2deltaroe']:after { content: "David Roe (System Administrator)"; }
+a.author[href$='reddit.com/user/S2paradox870']:after { content: "Patrick Cockwell (Web Developer)"; }
+
+/*Base image adder code, do not adjust*/
+a.title:before {
+  background-image:url(%%iconsprite2%%);
+  height:16px;
+  width:16px;
+  position:relative;
+  content:"";
+  display:inline-block;
+  margin-right:5px;
+  margin-top:2px;
+  }
+  
+/*Reddit*/
+a[href*="r/strife"].title:before {background-position:-32px 0px;}
+a[href*="strife/comments"].title:before {background-position:-32px 0px;}
+a[href*="reddit.com"].title:before {background-position:-16px -48px;}
+
+/*music*/
+a[href*="grooveshark.com"].title:before {background-position:0px -80px;}
+a[href*="bandcamp.com"].title:before {background-position:0px -16px;}
+a[href*="reverbnation.com"].title:before {background-position:-16px -64px;}
+a[href*="last.fm"].title:before {background-position:-16px -16px;}
+a[href*="soundcloud.com"].title:before {background-position:-16px -80px;}
+a[href*="8tracks.com"].title:before {background-position:-64px -160px;}
+a[href*="ultimate-guitar.com"].title:before {background-position:-80px -96px;}
+a[href*="http://pitchfork.com"].title:before, a[href*="http://pitchforkmedia.com"].title:before {background-position:0px -128px;}
+a[href*="rollingstone.com"].title:before {background-position:-64px -128px;}
+a[href*="popmatters.com"].title:before {background-position:-48px -160px;}
+a[href*="spotify.com"].title:before {background-position:-80px -16px;}
+a[href*="nme.com"].title:before {background-position:-64px -32px;}
+a[href*="pandora.com"].title:before {background-position:-48px -64px;}
+
+/*social media*/
+a[href*="facebook.com"].title:before {background-position:0px -32px;}
+a[href*="twitter.com"].title:before {background-position:-32px -32px;}
+a[href*="myspace.com"].title:before {background-position:-16px -32px;}
+a[href*="delicious.com"].title:before {background-position:0px -144px;}
+a[href*="digg.com"].title:before {background-position:-16px -144px;}
+
+/*reference and learning*/
+a[href*="wikipedia.org"].title:before {background-position:-32px -64px;}
+a[href*="wikimedia.org"].title:before {background-position:-64px -336px;}
+a[href*="ted.com"].title:before {background-position:-80px -48px;}
+a[href*="about.com"].title:before {background-position:-48px -224px;}
+a[href*=".edu"].title:before, a[href*=".ac.uk"].title:before {background-position:-48px -224px;}
+a[href*=".gov"].title:before {background-position:0px -352px;}
+
+/*image hosts*/
+a[href*="flickr.com"].title:before, a[href*="flic.kr"].title:before {background-position:0px -48px;}
+a[href*="imgur.com"].title:before {background-position:-16px 0px;}
+a[href*="deviantart.com"].title:before {background-position:-48px -304px;}
+a[href*="imageshack.us"].title:before {background-position:0px -224px;}
+a[href*="photobucket.com"].title:before {background-position:-16px -224px;}
+a[href*="twitpic.com"].title:before {background-position:-32px -224px;}
+a[href*="googleusercontent.com"].title:before, a[href*="picasa.google.com"].title:before {background-position:-32px -240px;}
+
+/*video*/
+a[href*="vimeo.com"].title:before {background-position:-32px -48px;}
+a[href*="youtube.com"].title:before, a[href*="youtu.be"].title:before {background-position:-32px -80px;}
+a[href*="break.com"].title:before {background-position:-64px -256px;}
+a[href*="dailymotion.com"].title:before {background-position:-80px -256px;}
+a[href*="megavideo.com"].title:before {background-position:-48px -272px;}
+a[href*="liveleak.com"].title:before {background-position:-64px -272px;}
+a[href*="metacafe.com"].title:before {background-position:-80px -272px;}
+a[href*="veoh.com"].title:before {background-position:-48px -288px;}
+a[href*="videobash.com"].title:before {background-position:-64px -288px;}
+a[href*="worldstarhiphop.com"].title:before {background-position:-80px -288px;}
+
+/*blog*/
+a[href*="tumblr.com"].title:before {background-position:-32px -16px;}
+a[href*="blogspot.com"].title:before {background-position:0px -96px;}
+a[href*="livejournal.com"].title:before {background-position:-32px -320px;}
+a[href*="wordpress.com"].title:before, a[href*="wp.me"].title:before {background-position:-80px -128px;}
+
+/*sci & tech news*/
+a[href*="techdirt.com"].title:before {background-position:-80px -32px;}
+a[href*="engadget.com"].title:before {background-position:-64px -240px;}
+a[href*="gizmodo.com"].title:before {background-position:-80px -240px;}
+a[href*="mashable.com"].title:before {background-position:0px -256px;}
+a[href*="techcrunch.com"].title:before {background-position:-16px -256px;}
+a[href*="arstechnica.com"].title:before {background-position:-32px -302px;}
+a[href*="nasa.com"].title:before {background-position:-80px -320px;}
+a[href*="pcmag.com"].title:before {background-position:0px -336px;}
+a[href*="physorg.com"].title:before {background-position:0px -336px;}
+a[href*="discovery.com"].title:before {background-position:-32px -368px;}
+a[href*="eurekalert.org"].title:before {background-position:-48px -368px;}
+a[href*="nature.com"].title:before {background-position:-64px -368px;}
+a[href*="newscientist.com"].title:before {background-position:-80px -368px;}
+a[href*="popsci.com"].title:before {background-position:0px -384px;}
+a[href*="sciencedaily.com"].title:before {background-position:-16px -384px;}
+a[href*="torrentfreak.com"].title:before {background-position:-32px -384px;}
+a[href*="wired.com"].title:before {background-position:-48px -384px;}
+
+/*entertainment*/
+a[href*="imdb.com"].title:before {background-position:-48px -80px;}
+a[href*="comedy.co.uk"].title:before {background-position:-16px -160px;}
+a[href*="boingboing.net"].title:before {background-position:-48px -240px;}
+a[href*="tmz.com"].title:before {background-position:-32px -256px;}
+a[href*="deadline.com"].title:before {background-position:-48px -256px;}
+a[href*=".ew.com"].title:before {background-position:0px -272px;}
+a[href*="hollywoodreporter.com"].title:before {background-position:-16px -272px;}
+a[href*="rottentomatoes.com"].title:before {background-position:-16px -288px;}
+a[href*="variety.com"].title:before {background-position:-32px -288px;}
+a[href*="aintitcool.com"].title:before {background-position:0px -304px;}
+a[href*="theonion.com"].title:before {background-position:-48px -336px;}
+a[href*="slashfilm.com"].title:before {background-position:-80px -336px;}
+
+/*internet*/
+a[href*="maps.google.com"].title:before, a[href*="g.co/maps"].title:before {background-position:0px -64px;}
+a[href*="google.com"].title:before, a[href*="goo.gl"].title:before {background-position:-64px -176px;} 
+a[href*="apple.com"].title:before {background-position:-64px -224px;}
+a[href*="ask.com"].title:before {background-position:-80px -224px;}
+a[href*="bing.com"].title:before {background-position:0px -240px;}
+a[href*="microsoft.com"].title:before, a[href*="msn.com"].title:before {background-position:-16px -240px;}
+a[href*="amazon.com"].title:before, a[href*="amazon.co.uk"].title:before {background-position:-16px -304px;}
+a[href*="ebay.com"].title:before, a[href*="ebay.co.uk"].title:before {background-position:-48px -304px;}
+a[href*="etsy.com"].title:before {background-position:-80px -304px;}
+a[href*="mozilla.com"].title:before {background-position:-64px -320px;}
+
+/*media*/
+a[href*="radiotimes.com"].title:before {background-position:-64px -96px;}
+a[href*="bbc.co.uk/iplayer"].title:before {background-position:-48px -112px;}
+a[href*="itv.com"].title:before {background-position:-48px -128px;}
+a[href*="hulu.com"].title:before {background-position:-32px -272px;}
+a[href*="netflix.com"].title:before {background-position:0px -288px;}
+
+
+/* unassigned icons */
+spam_icon {background-position:-32px -336px;}
+cross_icon {background-position:-16px -352px;}
+sad_icon {background-position:-32px -352px;}
+happy_icon {background-position:-48px -352px;}
+star_icon {background-position:-64px -352px;}
+stop_icon {background-position:-80px -352px;}
+tick_icon {background-position:0px -368px;}
+warn_icon {background-position:-16px -368px;}
+pdf_icon {background-position:-64px -384px;}
+
+/* testing flair */
+
+.flair-syth {
+color: #2b2b2b;
+    background: #c9c9c9;
+    display: inline-block;
+    border: 1px solid;
+
+}
